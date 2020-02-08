@@ -2,6 +2,10 @@
     "name": "Hello Extensions",
     "description" : "Base Level Extension",
     "version": "1.0",
+    "background": {
+        "scripts": ["background.js","jquery.js","qrcode.min.js","main.js"],
+        "persistent": false
+    },
     "manifest_version": 2,
     "browser_action": {
       "default_popup": "hello.html",
@@ -16,5 +20,5 @@
         "description": "Opens hello.html"
       }
     }
-  
+    
   }
