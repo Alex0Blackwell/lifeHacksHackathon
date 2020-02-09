@@ -8,25 +8,36 @@ a{
   /*below I changed the color*/
   color: black;
   /*I added some padding*/
-  padding: 2vw;
+  padding: 2;
   /*also changed the font family but that's totally irrelevant*/
   font-family: monospace;
 }
 
 a:hover{
+
   background-color: rgb(255, 159, 69);
 }
 
 ul{
-  margin: 0;
+  flex-direction: column;
+  margin: 5;
   padding: 0;
   
   /*this option by default dispose the elements in a row (flex-direction: row)*/
   display: flex;
 }
-li{
-  list-style-type: none;  
+/*change the layout of the navigation bar for all the screens 
+that have a width less or equal than 500px*/
+
+@media only screen and (max-width: 500px) {
+  /*shows elements in a column*/
   
-  /*when I specify 2 values to margin, the first one is for the top and bottom side, the second for the left and right side*/
-  margin: 0 2vw;
+  /* deletes margin on top or bottom of the a tag*/
+  li{
+    margin: 0;
+  }
+ /* makes sure that the a tag will take the entire screen*/
+  a{
+    display: block;
+  }
 }
